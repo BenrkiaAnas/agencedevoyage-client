@@ -1,0 +1,29 @@
+/*.bot2_wrapper {
+    background: #273652;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.bot2_wrapper a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bot2_wrapper a:hover {
+    text-decoration: underline;
+}
+
+.bot2_wrapper span {
+    padding: 0 5px;
+}
+
+.bot2_wrapper .left_side {
+    float: left;
+}
+
+.bot2_wrapper .right_side {
+    float: right;
+}
+*/

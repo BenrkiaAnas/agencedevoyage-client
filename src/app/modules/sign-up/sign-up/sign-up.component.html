@@ -1,0 +1,270 @@
+<div class="breadcrumbs1_wrapper">
+  <div class="container">
+    <div class="breadcrumbs1"><a href="">Home</a><span>/</span>Pages<span>/</span>Hotels</div>
+  </div><!-- index.html -->
+</div>
+
+
+<div id="content">
+  <div class="container">
+    <!--<div class="container register-form">-->
+    <!--<div class="form">-->
+    <!--<div class="note">-->
+    <!--<p>This is a simpleRegister Form made using Boostrap.</p>-->
+    <!--</div>-->
+
+    <!--<div class="form-content">-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="form-group">-->
+    <!--<input type="text" class="form-control" placeholder="Your Name *" value=""/>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<input type="text" class="form-control" placeholder="Phone Number *" value=""/>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="form-group">-->
+    <!--<input type="text" class="form-control" placeholder="Your Password *" value=""/>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<input type="text" class="form-control" placeholder="Confirm Password *" value=""/>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<button type="button" class="btnSubmit">Submit</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+
+    <div class="row">
+      <div class="col-ms-4 col-md-offset-2">
+        <div class="blog_content">
+          <div class="row">
+            <div class="col-8 mx-auto">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="title">Inscription</h5>
+                </div>
+                <div class="card-body">
+
+                  <!--<form [formGroup]="inscriptionForm">-->
+                  <!--<div class="controles-container">-->
+                  <!--<input matInput formControlName="id" [hidden]="true">-->
+                  <!--<mat-form-field class="col-12">-->
+                  <!--<input matInput formControlName="username" placeholder="Username">-->
+                  <!--<mat-error *ngIf="inscriptionForm.controls['username'].errors">* Champs Obligatoire .</mat-error>-->
+                  <!--</mat-form-field>-->
+
+                  <!--<mat-form-field class="col-12">-->
+                  <!--<mat-label>Selectionné un rôle</mat-label>-->
+                  <!--<mat-select [(value)]="role" formControlName="country">-->
+                  <!--<mat-option value="Admin">Admin</mat-option>-->
+                  <!--<mat-option value="Super-Admin">Super-Admin</mat-option>-->
+                  <!--</mat-select>-->
+                  <!--<mat-error *ngIf="inscriptionForm.controls['country'].errors">* Champs Obligatoire.</mat-error>-->
+                  <!--</mat-form-field>-->
+
+                  <!--</div>-->
+                  <!--<mat-error *ngIf="message && messageCode != 0">* {{message}}</mat-error><br>-->
+                  <!--<div class="button-row">-->
+                  <!--<button mat-raised-button color="primary" type="button" (click)="onSubmit()" [disabled]="!inscriptionForm.valid" >Modifier</button>-->
+                  <!--<button mat-raised-button color="warn" class="bclose" (click)="onClose()">Close</button>-->
+                  <!--</div>-->
+                  <!--</form>-->
+
+                  <form [formGroup]="inscriptionForm">
+                    {{inscriptionForm.value | json}}
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <mat-form-field>
+                            <input matInput formControlName="username" placeholder="Username">
+                            <mat-error *ngIf="inscriptionForm.controls['username'].errors">* Champs Obligatoire.
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <mat-form-field>
+                            <input matInput formControlName="password" placeholder="Mot de passe" [type]="hide ? 'password' : 'text'">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'cacher Mot de passe'" [attr.aria-pressed]="hide">
+                              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                            <mat-error *ngIf="inscriptionForm.controls['password'].hasError('required', 'password')">* Champs Obligatoire.
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <mat-form-field>
+                            <input matInput type="password" formControlName="confirmPassword" placeholder="Confirmez le mot de passe" [errorStateMatcher]="confirmPasswordMatcher">
+                            <mat-error *ngIf="inscriptionForm.hasError('notSame')">* mots de passe ne correspondent pas.
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <mat-form-field>
+                            <input matInput formControlName="email" placeholder="Email">
+                            <mat-error *ngIf="inscriptionForm.controls['email'].errors">* Champs Obligatoire.
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <mat-form-field>
+                            <input matInput formControlName="firstName" placeholder="Prenom">
+                            <mat-error *ngIf="inscriptionForm.controls['firstName'].errors">* Champs Obligatoire.
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <mat-form-field>
+                            <input matInput formControlName="lastName" placeholder="Nom">
+                            <mat-error *ngIf="inscriptionForm.controls['lastName'].errors">* Champs Obligatoire.
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Sexe : </label>
+                            <mat-radio-group formControlName="gendre">
+                              <mat-radio-button value="false"> masculin </mat-radio-button>
+                              <mat-radio-button value="true">féminin </mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <mat-form-field>
+                            <input matInput formControlName="country" placeholder="Pays">
+                            <mat-error *ngIf="inscriptionForm.controls['country'].errors">* Champs Obligatoire.
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <mat-form-field>
+                            <input matInput formControlName="city" placeholder="Ville">
+                            <mat-error *ngIf="inscriptionForm.controls['city'].errors">* Champs Obligatoire .
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <mat-form-field>
+                            <input matInput formControlName="tele" placeholder="Téléphone">
+                            <mat-error *ngIf="inscriptionForm.controls['tele'].errors">* Champs Obligatoire.
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <mat-form-field>
+                            <input matInput formControlName="profession" placeholder="Profession">
+                            <mat-error *ngIf="inscriptionForm.controls['profession'].errors">* Champs Obligatoire .
+                            </mat-error>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <button mat-raised-button color="primary" (click)="onSubmit()"
+                                [disabled]="!inscriptionForm.valid" class="col-4" >Inscription</button>
+                      </div>
+                    </div>
+
+
+
+
+
+                    <!--<div class="row">-->
+                      <!--<div class="col-md-6 pr-1">-->
+                        <!--<div class="form-group">-->
+                          <!--<label>First Name</label>-->
+                          <!--<input type="text" class="form-control" placeholder="Company" value="Mike">-->
+                        <!--</div>-->
+                      <!--</div>-->
+                      <!--<div class="col-md-6 pl-1">-->
+                        <!--<div class="form-group">-->
+                          <!--<label>Last Name</label>-->
+                          <!--<input type="text" class="form-control" placeholder="Last Name" value="Andrew">-->
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                      <!--<div class="col-md-12">-->
+                        <!--<div class="form-group">-->
+                          <!--<label>Address</label>-->
+                          <!--<input type="text" class="form-control" placeholder="Home Address"-->
+                                 <!--value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                      <!--<div class="col-md-4 pr-1">-->
+                        <!--<div class="form-group">-->
+                          <!--<label>City</label>-->
+                          <!--<input type="text" class="form-control" placeholder="City" value="Mike">-->
+                        <!--</div>-->
+                      <!--</div>-->
+                      <!--<div class="col-md-4 px-1">-->
+                        <!--<div class="form-group">-->
+                          <!--<label>Country</label>-->
+                          <!--<input type="text" class="form-control" placeholder="Country" value="Andrew">-->
+                        <!--</div>-->
+                      <!--</div>-->
+                      <!--<div class="col-md-4 pl-1">-->
+                        <!--<div class="form-group">-->
+                          <!--<label>Postal Code</label>-->
+                          <!--<input type="number" class="form-control" placeholder="ZIP Code">-->
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                      <!--<div class="col-md-12">-->
+                        <!--<div class="form-group">-->
+                          <!--<label>About Me</label>-->
+                          <!--<textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description"-->
+                                    <!--value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>-->
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

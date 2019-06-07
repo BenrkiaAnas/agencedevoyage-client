@@ -1,0 +1,75 @@
+<form [formGroup]="registerForm"  class="form3 clearfix">
+  <div class="select1_wrapper txt">
+    <label>Trié par :</label>
+  </div>
+  <div class="row">
+    <div class="select1_wrapper ">
+      <div class="col-sm-2">
+        <mat-form-field class="col-12">
+          <mat-label>Prix :</mat-label>
+          <mat-select  formControlName="prix" >
+            <mat-option [value]="prix"></mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="select1_wrapper  marginx">
+      <div class="col-sm-2">
+        <mat-form-field class="col-12">
+          <mat-label>Populaire :</mat-label>
+          <mat-select  formControlName="populaire" >
+            <mat-option [value]="populaire"></mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+  </div>
+
+</form>
+
+<!--<div>-->
+  <!--<img src="assets/images/aucune1.png"  onerror="this.src='assets/images/aucune.png'">-->
+<!--</div>-->
+
+
+    <div class="row list" >
+      <div class="col-sm-4" *ngFor="let item of collection | paginate: { itemsPerPage: 6, currentPage: p }">
+        <div class="thumb4">
+          <div class="thumbnail clearfix style3" >
+            <figure  >
+              <carousel>
+                <slide *ngFor=" let image of item.voyageOrganise.photos">
+                  <div >
+                  <img src="http://localhost:8000/uploads/images/{{image.image}} "  style="display: block; width: 100%; height:150px;"
+                       onerror="this.src='assets/images/aucune.png'">
+                  </div>
+                </slide>
+              </carousel>
+            </figure>
+            <div class="caption">
+              <div class="txt1">{{ item.voyageOrganise.destination}}</div>
+              <div class="txt3 clearfix">
+                <div class="left_side">
+                  <div class="price">{{item.priceAdult}} MAD</div>
+                  <div class="nums">par personne</div>
+                </div>
+                <div class="right_side">
+                  <a (click)="detail(item)" class="btn-default btn1">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="styl1">
+    <pagination-controls class="my-pagination" (pageChange)="p = $event"
+                         responsive="true"
+                         previousLabel="Précedent"
+                         nextLabel="Suivant">
+
+    </pagination-controls>
+</div>

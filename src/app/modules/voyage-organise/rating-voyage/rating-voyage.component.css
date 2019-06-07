@@ -1,0 +1,16 @@
+.carousel-inner {
+    text-align: center;
+    color: #fff;
+    padding-top: 25px;
+    background: url(../../../../assets/images/q1.png) center top no-repeat;
+}
+
+.carousel-inner .txt1 {
+}
+
+.carousel-inner .txt2 {
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff799;
+    padding-top: 10px;
+}

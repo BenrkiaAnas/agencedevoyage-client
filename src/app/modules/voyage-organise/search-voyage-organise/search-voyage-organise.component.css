@@ -1,0 +1,11 @@
+.marginx {
+    margin-left: 2%;
+}
+.my-pagination /deep/ .ngx-pagination .current {
+    background: rgba(77,100,138, 0.8);
+
+}
+.styl1{
+    margin-left: 25%;
+    margin-top: 6%;
+}

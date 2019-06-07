@@ -1,0 +1,45 @@
+/* Start The Form Element */
+#front_tabs {
+    position: relative;
+    margin-top: -175px;
+}
+
+.tabs_wrapper {
+    position: relative;
+}
+.nav-tabs li
+{
+
+    background: #273652;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none
+}
+.nav-tabs li a {
+    color : #fff;
+    text-decoration: none;
+}
+.nav-tabs > li > a:hover
+{
+    background: inherit;
+    border: none;
+}
+.nav-tabs > li.active
+{
+    background-color: #fafafa;
+
+}
+.nav-tabs > li.active > a
+{
+    color: #4d648a;
+    background-color: inherit;
+    border: none;
+}
+.nav-tabs > .flights > a span
+{
+    background: url(../../../../assets/images/flights.png) 20px center no-repeat #273652;
+}
+.nav-tabs li:active {
+
+}

@@ -1,0 +1,119 @@
+<div id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+
+
+        <h3 class="text-center hch2">{{planningVoyage.voyageOrganise.destination}}</h3>
+        <div class="clearfix"></div>
+        <p class="address text-center">Réservation En ligne </p>
+
+        <div class="clearfix"></div>
+
+
+        <mat-horizontal-stepper linear #stepper>
+          <mat-step [stepControl]="registerForm">
+            <form [formGroup]="registerForm">
+              <ng-template matStepLabel>Infromations Sur Votre Reservation</ng-template>
+
+              <div class="input2_wrapper">
+                <mat-form-field class="col-md-6">
+                  <input matInput type="number" formControlName="nbrAdult" placeholder="Nombre Adulte">
+                  <mat-error *ngIf="registerForm.controls['nbrAdult'].errors">* Nombre Obligatoire entre 0 et 30.</mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="clearfix"></div>
+              <div class="input2_wrapper">
+                <mat-form-field class="col-md-6">
+                  <input matInput type="number" formControlName="nbrchild" placeholder="Nombre Enfant">
+                  <mat-error *ngIf="registerForm.controls['nbrchild'].errors">* Nombre Obligatoire entre 0 et 3.</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="clearfix"></div>
+              <div>
+                <button mat-button matStepperNext  class="btn btn-primary" (click)="getData()">Suivant</button>
+              </div>
+            </form>
+          </mat-step>
+
+
+          <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
+            <ng-template matStepLabel>Confirmation</ng-template>
+            <form [formGroup]="secondFormGroup">
+              <label>Nombre d'adultes selectionné : {{adult}} </label> <br>
+              <label>Nombre d'enfants selectionné : {{enfant}} </label><br>
+              <label class="col-md-6" style="padding-left:0;padding-top:18px;font-size:16px;">GRAND
+                TOTAL : {{prix}}    MAD
+              </label>
+              <div class="clearfix"></div>
+              <div>
+                <button mat-button matStepperPrevious class="btn btn-primary" >Precedent</button>
+
+                <button mat-button matStepperNext (click)="addReservation()" style="margin-left: 2%" class="btn btn-primary">Reserver</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Payment Paypal</ng-template>
+            <label>Montant : {{finalAmount}} USD</label>
+            <!--<button mat-button matStepperNext (click)="reservValider()" class="btn btn-default btn-cf-submit3">valider</button>-->
+            <h2 *ngIf="paypalLoad">Paypal button is loading</h2>
+            <div id="paypal-checkout-btn"></div>
+          </mat-step>
+        </mat-horizontal-stepper>
+
+
+
+
+          <div class="clearfix"></div>
+          <div class="margin-top"></div>
+          <!--<a (click)="addReservation()" class="btn btn-default btn-cf-submit3">Reserver</a>-->
+          <!--<h2 *ngIf="paypalLoad">Paypal button is loading</h2>-->
+          <!--<div id="paypal-checkout-btn"></div>-->
+
+
+
+
+        <div class="col-md-4"></div>
+
+
+        <div class="col-md-4 booking-row">
+         <!-- User Information -->
+          <h3 class="line">Informations Personnel</h3>
+
+          <div class="input2_wrapper">
+            <label class="col-md-5" style="padding-left:0;padding-top:12px;">Nom Complet</label>
+
+            <div class="col-md-7" style="padding-right:0;padding-left:0;">
+              <!--<input type="text" class="form-control" value="Michael" spellcheck="false">-->
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="input2_wrapper">
+            <label class="col-md-5" style="padding-left:0;padding-top:12px;">Username </label>
+
+            <div class="col-md-7" style="padding-right:0;padding-left:0;">
+              <!--<input type="text" class="form-control" value="Berkovich" spellcheck="false">-->
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="input2_wrapper">
+            <label class="col-md-5" style="padding-left:0;padding-top:12px;">Email</label>
+
+            <div class="col-md-7" style="padding-right:0;padding-left:0;">
+              <!--<input type="email" class="form-control" value="your@email.com" spellcheck="false">-->
+            </div>
+          </div>
+          <div class="clearfix"></div>
+
+
+          <!-- fin User Informations -->
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,193 @@
+button
+{
+    border: none;
+    border-radius: 0;
+    box-shadow : none;
+    margin-top: 0;
+}
+
+
+
+
+
+/*.top1_wrapper {
+    background: #fafafa;
+    border-top: 3px solid #4d648a;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.email1 {
+    float: left;
+    padding-left: 25px;
+    background: url(../../../assets/images/email1.png) left center no-repeat;
+    border-right: 1px solid #ebebeb;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+.email1 a {
+    display: block;
+    font-size: 13px;
+    color: #acacac;
+    text-decoration: none;
+    line-height: 20px;
+}
+.phone1 {
+    float: left;
+    padding-left: 25px;
+    background: url(../../../assets/images/phone1.png) left center no-repeat;
+}
+
+.social_wrapper {
+    float: right;
+}
+
+
+.social {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social li {
+    display: inline-block;
+    margin: 0 10px;
+    float: left;
+}
+
+.social li a {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ebebeb;
+    text-align: center;
+    line-height: 20px;
+    transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+.social li a:hover {
+    color: #4d648a;
+}
+.lang1 {
+    float: right;
+    border-right: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+    width: 150px;
+    margin-right: 20px;
+}
+
+.lang1 .dropdown-toggle {
+    border: none;
+    padding: 0;
+    background: none !important;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding-left: 30px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 20px;
+    color: #acacac;
+}
+
+.lang1 .dropdown-toggle:focus, .lang1 .dropdown-toggle:active {
+    background: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.lang1 .dropdown-toggle:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 12px;
+    background: url(../../../assets/images/flag_en.png) 0 0 no-repeat;
+    vertical-align: top;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+.lang1 .dropdown-toggle .caret {
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    border: none;
+    background: url(../../../assets/images/arr0.png);
+    margin-left: 10px;
+}
+
+
+.lang1 .dropdown-menu {
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    left: -1px;
+    right: -1px;
+    margin-top: 13px;
+    border-radius: 0;
+    border: 1px solid #ebebeb;
+    box-shadow: none;
+}
+
+.lang1 .dropdown-menu a {
+    display: block;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 4px 30px;
+    color: #acacac;
+    text-decoration: none;
+}
+
+.lang1 .dropdown-menu a:hover {
+    background: #d1fff8;
+    color: #fff;
+}
+
+.lang1 .dropdown-menu a:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 12px;
+    background: url(../../../assets/images/flag_en.png) 0 0 no-repeat;
+    vertical-align: top;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+.lang1 .dropdown-menu a.ge:before {
+    background: url(../../../assets/images/flag_ge.png) 0 0 no-repeat;
+}
+
+.lang1 .dropdown-menu a.ru:before {
+    background: url(../../../assets/images/flag_ru.png) 0 0 no-repeat;
+}
+@media (max-width: 767px) {
+
+    .top1_wrapper {
+        display: none;
+    }
+    .email1 {
+        float: none;
+        margin-right: 0;
+        border-right: none;
+        margin-bottom: 10px;
+    }
+    .phone1 {
+        float: none;
+        margin-bottom: 10px;
+    }
+    .social_wrapper {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    .lang1 {
+        border: none;
+        float: none;
+    }
+}
+*/

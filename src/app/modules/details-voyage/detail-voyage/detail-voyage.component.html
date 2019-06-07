@@ -1,0 +1,160 @@
+
+
+<div id="content">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="blog_sidebar">
+
+
+          <div class="container">
+            <button mat-stroked-button class="buttonStyle" (click)="reserver(planningVoyage)">Réserver en ligne</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="blog_content">
+
+          <div class="post post-full">
+            <h3 class="hch">{{planningVoyage.voyageOrganise.title}}</h3>
+
+            <div class="clearfix"></div>
+            <p class="address">{{planningVoyage.voyageOrganise.description}}</p>
+
+            <!-- Slider a refaire -->
+
+
+            <div class="post-header">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <carousel>
+                  <slide *ngFor=" let image of planningVoyage.voyageOrganise.photos">
+                    <div >
+                      <img src="http://localhost:8000/uploads/images/{{image.image}} " style="display: block; width: 100%; height:350px;"
+                           onerror="this.src='assets/images/aucune.png'">
+                    </div>
+                  </slide>
+                </carousel>
+              </div>
+            </div>
+
+            <!-- Sliderfin -->
+
+
+            <div class="post-story">
+              <div class="post-story-info margin-top">
+                <div class="date12">Les Inclusions :</div>
+                <div class="by" *ngFor="let inclusion of planningVoyage.inclusion">
+                                        <span class="option-booking">
+                                            <i class="free-wifi"></i> <span>{{inclusion.label}}</span>
+                                        </span>
+                </div>
+              </div>
+
+              <div class="post-story-body clearfix">
+
+                <p>Description :  {{planningVoyage.description}}
+                </p>
+
+              </div>
+              <div class="post-story-tags clearfix">
+
+                <div class="tags_wrapper" >
+                  <b>Tags </b>:
+
+                  <a *ngFor="let categorie of planningVoyage.voyageOrganise.Categories" class="styleTags"># {{categorie.label}}</a>
+
+                </div>
+
+                <div class="share_post clearfix">
+                  <div class="txt1">Partager sur Facebook :</div>
+                  <div class="social4_wrapper">
+                    <ul class="social4 clearfix">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="num-comments">Commentaires</div>
+
+          <div class="comment-block clearfix">
+            <figure>
+              <img src="http://placehold.it/70x70" alt="" class="img-responsive">
+            </figure>
+            <div class="caption">
+              <div class="top clearfix">
+                <div class="txt1">Publié par : <a href="#">George Smith</a></div>
+                <span>|</span>
+
+                <div class="txt2">Date: 06 March, 2016</div>
+
+
+              </div>
+              <div class="txt">
+                Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                Claritas est etiam
+                processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-block clearfix">
+            <figure>
+              <img src="http://placehold.it/70x70" alt="" class="img-responsive">
+            </figure>
+            <div class="caption">
+              <div class="top clearfix">
+                <div class="txt1">Publié par : <a href="#">George Smith</a></div>
+                <span>|</span>
+
+                <div class="txt2">Date: 06 March, 2016</div>
+
+
+              </div>
+              <div class="txt">
+                Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                Claritas est etiam
+                processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+              </div>
+            </div>
+          </div>
+
+
+          <div class="live-comment">
+            <div class="live-comment-title">Publié Votre Commentaire :</div>
+            <div class="live-comment-form">
+
+              <div id="note3"></div>
+              <div id="fields3">
+                <form  class="form-horizontal" >
+
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <mat-form-field class="example-full-width">
+                          <textarea matInput placeholder="Ecrivez Votre Commentaire"></textarea>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <button mat-raised-button type="submit" class="btn-default btn-cf-submit3" (click)="onSubmit()"  >Publier</button>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
