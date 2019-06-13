@@ -10,7 +10,7 @@ import { FooterComponent } from './Shared/footer/footer.component';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {RouterModule} from '@angular/router';
-import {MaterialModule} from './material/material.module
+import {MaterialModule} from './material/material.module';
 import { ConfirmationMailComponent } from './modules/sign-up/confirmation-mail/confirmation-mail.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { CarouselModule } from 'ngx-bootstrap/carousel';

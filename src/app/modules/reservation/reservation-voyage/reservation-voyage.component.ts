@@ -32,8 +32,8 @@ export class ReservationVoyageComponent implements OnInit, AfterViewChecked {
     paypalConfig = {
         env: 'sandbox',
         client: {
-            sandbox: 'AediOHX3lmwrxQ550n05aWekgxxpFhMyx4HM7VYYdBBtT_yy4jno9_ZqAL77DFYOu-lBGRY_suxDzLgb',
-            production: 'EOw-xYotP-TwAxmyFaRoNg3_NvtvTerlDnx1Q9o80tFC1gcEoKUFZ8TespoZqDfhAuOrYAJVdEwaQVWA'
+            sandbox: 'AUXp7M0H__JY9wLWx10ewIPFryHg7stjxPYuzM7aLsmK2dhngTQNov1V3nf4Ndwm01BBJIzIC0biqG5d',
+            production: 'EDcl8xCM7mvBqI3ysyPY_dfZAPZrhnz6827OGAQHVdFeJKx-H0QrC3f4dJtFD2o2LkIX5HgGtlJlDaNl'
         },
         commit: true,
         payment: (data, actions) => {
