@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from '../../material/material.module';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {CarouselModule} from "ngx-bootstrap";
 
 @NgModule({
   declarations: [CategoryComponent, VoyageOrganiseRecentComponent, HeaderComponent, HomeComponent],
@@ -16,7 +18,10 @@ import {MaterialModule} from '../../material/material.module';
     HomeRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    NgbModule,
+    CarouselModule,
+    CarouselModule.forRoot()
   ],
     entryComponents: [HeaderComponent]
 })
